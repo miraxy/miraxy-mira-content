@@ -167,17 +167,23 @@ chaptername: گام هشتم: انتشار
 - گیت را در دایرکتوری ریشه‌ای که میرا را در آن استفاده می‌کنید، پیکربندی کنید و مخزن YOUR-SITE-mira را به عنوان remote به پروژه اضافه کنید.
 
 	~/mira$> git init
-	~/mira/public$> echo "public" > .gitignore
 	~/mira$> git remote add origin git@github.com:USER/YOUR-SITE-mira-content.git
 	~/mira$> git add .
 	~/mira$> git commit -m 'start'
 
-- حالا مخزن YOUR-SITE-mira را به عنوان remote به گیت دایرکتوری میرا اضافه کنید
 - حالا public را به عنوان یک ساب ماژول به این مخزن معرفی میکنیم:
 
 	git submodule add -b master git@github.com:USER/USER.github.io.git public
 
+تمام شد، حالا بعد از هر بار mira build، یک بار در شاخه اصلی و یک بار در شاخه public همه چیز را به گیت اضافه کنید و push کنید
 
+	~/mira$> git add .
+	~/mira$> git commit -m 'add content'
+	~/mira$> git push origin master
+	~/mira$> cd public
+	~/mira/public$> git add .
+	~/mira/public$> git commit -m 'publish'
+	~/mira/public$> git push origin master
 
 
 

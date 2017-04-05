@@ -1,0 +1,57 @@
+---
+utid: 20170225232209
+date: 2017-02-25 23:22:09
+title: img
+_index: img-parser
+_permalink:
+chapter: 05
+chaptername: parser
+tags:
+  - parser
+  - image
+author: kiavash
+_markup: markdown
+---
+در هر قسمت از فایل محتوایی که با پسوند pen تولید شده، با استفاده از برچسب \{{ img }} میتوان یک عکس را در بدنه نوشته لود کرد
+
+قاعده استفاده از آن به این شکل است:
+
+	\{{ img addres/image.jpg [alt] [title] }}
+
+- در این برچسب alt و title اختیاری هستند
+- هر دو گزینه‌ی alt و title باید بین [] قرار بگیرند
+- آدرس عکسی که لود میکنید اگر با
+```
+http://  
+https://  
+ftp://  
+```
+یا هرچیزی مثل این‌ها شروع نشود از فیلد imageurl در فایل تنظیمات طبقه انشعاب میگیرد.
+
+
+در هر جایی از نوشته که میرا با برچسب بالا مواجه شود آن را با کد html شبیه به این یکی میداند.
+
+	<img src="/FLOOR/IMG/address/image.jpg" alt="alt" title="title">
+
+مثلا اگر نوشته شما در طبقه وبلاگ با نام blog قرار دارد و در فایل config/blog.yml مقدار imageurl را مساوی
+
+	imageurl: /static/blog/images
+
+قرار داده‌باشید، نتیجه این خواهد بود:
+
+	<img src="/static/blog/images/address/image.jpg" alt="alt" title="title">
+
+در صورتیکه img را به این صورت نوشته باشید
+
+	\{{ img http://addres.com/image.jpg [image alt] [image title] }}
+
+با این کد html برابر خواهد بود:
+
+	<img src="http://address.com/image.jpg" alt="image alt" title="image title">
+
+اگر میخواهید پارسر عمل نکند یک \ قبل از } ابتدایی قرار دهید
+
+	اگر در بدنه پست بنویسید
+	\\{{ img ... }}
+	نشان داده خواهد شد:
+	\{{ img ... }}

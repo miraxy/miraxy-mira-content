@@ -1,0 +1,35 @@
+
+#general 'mira' config, you can make config files for any floor in /config/FLOOR_NAME.yml
+
+
+## Site settings
+title: میرا
+description: چهارچوب مدیریت یکپارچه محتوا برای ساختن وبسایت‌های چندگانه
+
+author: kiavash
+email: kiavash@gmail.com
+
+ # the base hostname & protocol for your site
+url: http://miraxy.github.io/fa
+root: /fa/
+
+## default post permanent link
+permalink: :title/
+
+## Build settings
+default_markup: markdown
+
+## number of posts will be show in main index page
+post_num: all
+post_sort: reverse
+## number of posts will be show in archives index page
+archive_post_num: all
+
+template: mira-intro-rtl
+
+lists:
+  - categories
+
+namespace:
+  گیت: git
+

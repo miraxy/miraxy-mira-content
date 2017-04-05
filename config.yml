@@ -1,0 +1,44 @@
+
+#general 'mira' config, you can make config files for any floor in /config/FLOOR_NAME.yml
+
+## Site settings
+title: Mira
+description: integrated content management framework for create multiple websites
+
+author: kiavash
+email: kiavash@gmail.com
+
+# the base hostname & protocol for your site
+url: http://miraxy.github.io
+root: /
+static: /static
+imageurl: /static/img
+
+## default post permanent link
+permalink: :year/:month/:day/:title/
+
+## Build settings
+default_markup: markdown
+
+## number of posts will be show in main index page
+post_num: 3
+
+## number of posts will be show in archives index page
+archive_post_num: 10
+
+## if create new entry without --floor switch, mira use this field
+default_floor: start-fa
+
+## if you want use a custom template for examle in penurlPATH/template/CustomThEM
+## just type custom template folder name
+#> template: Custom_Template_Folde_Name
+template: mira-theme
+
+lists:
+  - categories
+  - tags
+  - author
+
+namespace:
+  veryverylongarchivename : vlan
+

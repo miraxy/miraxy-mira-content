@@ -1,0 +1,16 @@
+<div class="col-lg-3 col-lg-offset-1 col-md-3 col-md-offset-1 sidebar">
+<ul class="nav">
+  <li><h2><a href="{{ ROOT }}/">{{ TITLE }}</a></h2></li>
+  <li><h5>{{ DESCRIPTION }}</h5></li>
+
+{% FOREACH CHAPTER_ARCHIVE.sort('name')
+    {{ FOREACH post IN posts.sort }}
+      {{ IF loop.index == 0 }}
+        <h3>{{ ENTRIES.$post.chaptername }}</h3>
+      {{ END }}
+      <h5><a href="#{{ ENTRIES.$post.title }}">{{ ENTRIES.$post.title }}</a></h5>
+<!--      <h5><a href="#{{ ENTRIES.$post.url }}">{{ ENTRIES.$post.title }}</a></h5> -->
+    {{ END }}
+{% END
+</ul>
+</div>

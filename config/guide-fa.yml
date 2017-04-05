@@ -1,0 +1,37 @@
+
+#general 'mira' config, you can make config files for any floor in /config/FLOOR_NAME.yml
+
+## Site settings
+title: راهنمای میرا
+description: اسناد راهنما برای شروع کار با میرا
+
+author: kiavash
+email: kiavash@gmail.com
+
+ # the base hostname & protocol for your site
+url: http://miraxy.github.io/guide-fa
+root: /guide-fa/
+
+## default post permanent link
+permalink: :title/
+
+plugins:
+ - jalali
+
+## Build settings
+default_markup: markdown
+
+## number of posts will be show in main index page
+post_num: all
+post_sort: reverse
+## number of posts will be show in archives index page
+archive_post_num: all
+
+template: mira-doc
+
+lists:
+  - categories
+  - chapter
+
+namespace:
+

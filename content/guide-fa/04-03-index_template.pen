@@ -1,0 +1,43 @@
+---
+utid: 20170216035543
+date: 2017-02-16 03:55:43
+title: index.tt2 و atom.tt2
+_index: indextemplate
+_permalink:
+chapter: 04
+chaptername: قالب
+tags:
+  - قالب
+  - theme
+  - index
+author: kiavash
+_markup: markdown
+---
+به جز برچسب UTIDS تمام برچسب‌های main.tt2 در index و atom feed با همان مقادیر معتبر هستند
+
+	{{ MianTITLE }}
+	{{ MianDESCRIPTION }}
+	{{ MianURL }}
+	{{ MianROOT }}
+	{{ MianSTATIC }}
+	{{ MainIMAGEURL }}
+	{{ MianAUTHOR }}
+	{{ MianEMAIL }}
+	{{ PageTITLE }}
+
+	{{ TITLE }}
+	{{ DESCRIPTION }}
+	{{ URL }}
+	{{ ROOT }}
+	{{ STATIC }}
+	{{ IMAGEURL }}
+	{{ AUTHOR }}
+	{{ EMAIL }}
+
+	{{ ARCHIVES}} :
+	{{ FOREACH archive IN ARCHIVES.pairs }}
+
+برای اطلاعات کامل‌تر در مورد آرشیو ها قسمت اول بخش پوسته ها را ببینید، این برچسب مناسب برای نمایش در سایدبار و امثال آن است. برای ساختن صفحات آرشیو، archive.tt2 از POSTS استفاده می‌کند، کارکرد این برچسب با صفحات archive متفاوت است.
+
+	{{ ENTRIES }}
+	{{ FLOORS }}

@@ -1,0 +1,74 @@
+---
+utid: 20170216024228
+date: 2017-02-16 02:42:28
+title: main.tt2
+_index: main template
+_permalink:
+chapter: 04
+chaptername: قالب
+tags:
+  - قالب
+  - theme
+  - main theme
+author: kiavash
+_markup: markdown
+---
+برچسب‌های معتبر در این قالب و مقادیرشان.  
+
+	{{ MainTITLE }}
+	{{ MainDESCRIPTION }}
+	{{ MainURL }}
+	{{ MainROOT }}
+	{{ MainSTATIC }}
+	{{ MainIMAGEURL }}
+	{{ MainAUTHOR }}
+	{{ MainEMAIL }}
+	{{ MainPageTitle }}
+
+
+تنها راه نمایش محتوا در صفحه‌ی main، استفاده از حلقه‌ی FLOORS به صورت مستقل، یا حلقه‌ی ENTRIES و کلیدهای UTIDS می‌باشد.
+
+برای انتشار محتوا در هر سایت از حلقه‌ی POSTS استفاده خواهیم کرد، دقت کنید این حلقه در main معتبر نیست. اما posts به عنوان یک حلقه زیر مجموعه FLOORS معتبر است.
+
+### FLOORS
+
+این حلقه تنها به اندازه‌ی مقداری که در فیلد post_num در فایل config.yml مشخص کرده‌اید از محتوای هر طبقه را در خود ذخیره می‌کند.
+نحوه‌ استفاده:
+
+	{{ FOREACH FLOORS.values }}
+	  {{ name }}
+	  {{ description }}
+	
+	  {{ FOREACH post IN posts }}
+	    <h2><a href="{{ post.url }}">{{ post.title }}</a><h2>
+	    <h4>{{ post.CALENDAR.day }}-{{ post.CALENDAR.month_name }}-{{ post.CALENDAR.year }}</h4>
+	    <p>{{ post.body.less }}</p>
+	  {{ END }}
+	
+	{{ END }}
+
+
+### UTIDS
+
+کلید نام تمام محتوای موجود در سایت مرتب شده بر اساس مقدار utid هر پست، برابر با utid هر پست، در UTIDS ذخیره شده، برای لود کردن محتوا در برچسب ENTRIES قابل استفاده است.
+
+این برچسب تنها مختص به main.tt2 میباشد
+
+تمام مقادیر معتبر برای POSTS در زیر این برچسب با اضافه کردن ENTRIES.$id نیز قابل استفاده هستند.
+
+نحوه‌ی استفاده به همراه ENTRIES
+
+	{{ FOREACH id IN UTIDS }}
+	   <h2><a href="{{ ENTRIES.$id.url }}">{{ ENTRIES.$id.title }}</a><h2>
+	   <h4>{{ ENTRIES.$id.CALENDAR.day }}-{{ ENTRIES.$id.CALENDAR.month_name }}-{{ ENTRIES.$id.CALENDAR.year }}</h4>
+	   <p>{{ ENTRIES.$id.body.less }}</p>
+	{{ END }}
+
+تمام محتوای تولید شده، نمایش داده خواهند شد، تاکید میکنم، **تمام محتوا**، اگر در میرا پنج سایت(طبقه) ساخته باشید و در هرکدام ۱۰۰ پست باشد، این کد تمام ۵۰۰ نوشته‌ی شما را به ترتیب مقدار عددی utid نمایش خواهد داد.  
+برای محدود کردن نمایش تعداد پست‌ها میتوان از کدهای کنترل کننده حلقه استفاده کرد، مثال:
+
+	{{ FOREACH id IN UTIDS }}
+	   do any thing
+	   {{ LAST IF loop.count == 10 }}
+	{{ END }}
+	بعد از ۱۰ بار تکرار حلقه تمام خواهد شد.

@@ -1,0 +1,27 @@
+---
+utid: 20170216003417
+date: 2017-02-16 00:34:17
+title: لیست ها
+_index: lists
+_permalink:
+chapter: 03
+chaptername: محتوا
+tags:
+  - سربرگ
+  - header
+author: kiavash
+_markup: markdown
+---
+اگر بخواهید فیلدهایی را با مقداری بیشتر از یک آیتم داشته باشید، باید آن‌ها را به صورت لیست‌هایی با این دستور زبان بسازید:  
+
+نام فیلد، دونقطه، اینتر، فاصله، خط تیره، فاصله، مقدار
+
+	categories:
+	 - cat1
+	 - cat2
+
+	tags:
+	 - tag1
+	 - tag2
+	 - tag3
+	 - tag4

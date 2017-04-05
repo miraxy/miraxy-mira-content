@@ -1,0 +1,58 @@
+---
+utid: 20170211170823
+date: 2017-02-11 17:08:23
+title: نصب
+_index: install
+_permalink:
+chapter: 01
+chaptername: شروع
+categories:
+  - شروع
+tags:
+  - install
+  - perl
+  - mira
+author: kiavash
+body-format: markdown
+---
+میرا برای نصب به پرل نسخه 5.12 به بالا نیاز دارد
+
+برای تست این که پرل را روی سیستم خود از قبل نصب شده دارید یا نه، terminal یا command line را باز کنید و تایپ کنید `perl -v`
+اگر پرل از قبل نصب شده باشد متنی شبیه به این را خواهید دید که ورژن پرل نصب شده را به شما نشان خواهد داد
+
+	This is perl 5, version 24, subversion 1 (v5.24.1)
+
+اگر پرل را ندارید از این طریق آن‌را نصب کنید:
+
+
+## ویندوز
+اگر از ویندوز استفاده میکنید [Strawberry Perl](http://strawberryperl.com/ "Strawberry Perl") یا «پرل توت فرنگی» را ابتدا نصب کنید  
+توت فرنگی cpan minus را به شکل توکار همراه خود دارد، برای نصب میرا تایپ کنید:
+
+	cpanm Mira
+
+## سیستم‌های شبه یونیکس
+### لینوکس
+توزیع‌های لینوکس به شکل توکار پرل را در خود دارند، اما اگر نیاز به نصب مجدد یا نصب نسخه‌ی بالاتری که در توزیع شما نصب نیست دارید به این صفحه مراجعه کنید
+[getperl](https://www.perl.org/get.html "Perl")  
+اگر capan minus را ندارید آن‌را نصب کنید
+
+	curl -L https://cpanmin.us | perl - --sudo App::cpanminus
+
+و بعد برای نصب میرا
+
+	sudo cpanm Mira
+
+
+### مک
+مک به شکل توکار پرل را در خود دارد، اما اگر نیاز به نصب مجدد یا نصب نسخه‌ی بالاتری که در حال حاضر بر روی کامپیوترتان نصب نیست دارید به این صفحه مراجعه کنید
+[getperl](https://www.perl.org/get.html "Perl")  
+
+اگر capan minus را ندارید آن‌را نصب کنید
+
+	curl -L https://cpanmin.us | perl - --sudo App::cpanminus
+
+و بعد برای نصب میرا
+
+	sudo cpanm Mira
+

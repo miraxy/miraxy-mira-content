@@ -1,0 +1,61 @@
+
+{{ INCLUDE header }}
+
+
+<header>
+    <div class="container">
+        <div class="row">
+            <div class="hidden-xs col-md-1"></div>
+            <div class="col-xs-12 col-md-10">
+                <img src="{{ MainSTATIC }}/img/mira-c.png" class="img-responsive mira-header" alt="mira">
+                <div class="page-header">
+                  <h1>{{ TITLE }}</h1>
+                  <h2>{{ DESCRIPTION }}</h2>
+                </div>
+            <div class="hidden-xs col-md-1"></div>
+        </div>
+    </div>
+</header>
+
+
+
+<!-- Main Content -->
+<div class="container">
+  <div class="row">
+    <div class="col-lg-12 col-md-12">
+       {{ FOREACH POSTS }}
+          {{ IF loop.index == 0 }}
+          <div class="jumbotron jumbotron-custom">
+            <h1>{{ title }}</h1>
+            <p>{{ body.more }}</p>
+          </div>
+          {{ ELSIF loop.index < 4 }}
+          <div class="col-md-4">
+            <h2>{{ title }}</h2>
+            <p class="lead">{{ body.more }}</p>
+          </div>
+          {{ ELSE }}
+    </div>
+  </div>
+</div>
+          <div class="container start-custom">
+            <div class="row">
+              <div class="col-md-2"></div>
+              <div class="col-sm-12 col-md-8">
+                <h1>{{ title }}</h1>
+                <p>{{ body.more }}</p>
+              </div>
+              <div class="col-md-2"></div>
+            </div>
+            <h1>بیشتر در مورد میرا بدانید<h1>
+            <p>
+            <a class="btn btn-primary btn-lg" href="/start-fa/" role="button">شروع با میرا</a>
+            <a class="btn btn-primary btn-lg" href="/guide-fa/" role="button">اسناد راهنما</a>
+            </p>
+          </div>
+          {{ END }}
+        {{ END }}
+
+
+
+{{ INCLUDE footer }}

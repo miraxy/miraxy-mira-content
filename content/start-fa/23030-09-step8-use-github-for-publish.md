@@ -39,24 +39,25 @@ chaptername: گام هشتم: انتشار
 دایرکتوری که mira را در آن پیکربندی کردید را کلا به عنوان شاخه‌ی master از مخزن اصلی تعریف کنید و مخزنی که روی گیت‌هاب برای آن ساخته‌اید را به عنوان remote به گیت معرفی کنید.
 
 	git init
+	git remote add origin git@github.com:USER/YOUR-SITE-mira.git
 	git add --all
 	git commit -m 'start'
-	git add remote GITHUB_REPO_ADDRESS
+	git push origin master
 
 از این به بعد، پس از هر بار اجرا کردن mira build و ساخته شدن سایتتان، تغییرات را به گیت اضافه و publish کنید.
 
 	mira build
 	git add --all
-	git commit -m 'publish'
+	git commit -m 'add new content and publish'
 	git push origin master
 
 از حالا به بعد اگر آدرس مخزنی که روی گیت هاب ساخته بودید چیزی شبیه به این آدرس بود:
 
-	github.com/USER/REPO.git
+	github.com/USER/YOUR-SITE-mira.git
 
 محتوای شما در آدرسی شبیه به این آدرس با استفاده از فایل‌های قرار گرفته در دایرکتوری docs منتشر خواهد شد:
 
-	USER.github.io/REPO
+	USER.github.io/YOUR-SITE-mira
 
 و اگر می‌خواهید از نام دامین اختصاصی خودتان برای نمایش محتوا استفاده کنید، فایلی به نام CNAME را در docs بسازید و نام دامنه‌ی خودتان را در آن بنویسید
 
@@ -94,7 +95,7 @@ chaptername: گام هشتم: انتشار
 
 آدرس مخزنی که در گیت‌هاب ساخته‌اید را به عنوان remote به پروژه اضافه می‌کنیم و شاخه‌ی master را push می‌کنیم.
 
-	git add remote GITHUB_REPO_ADDRESS
+	git remote add origin git@github.com:USER/YOUR-SITE-mira.git
 	git push origin master
 
 
@@ -103,7 +104,7 @@ chaptername: گام هشتم: انتشار
 	git checkout --orphan gh-pages
 	git reset --hard
 	git commit --allow-empty -m "Initializing gh-pages"
-	git push upstream gh-pages
+	git push origin gh-pages
 
 به شاخه‌ی master بر می‌گردیم
 
@@ -131,11 +132,11 @@ chaptername: گام هشتم: انتشار
 
 از حالا به بعد اگر آدرس مخزنی که روی گیت هاب ساخته بودید چیزی شبیه به این آدرس بود:
 
-	github.com/USER/REPO.git
+	github.com/USER/YOUR-SITE-mira.git
 
 محتوای شما در آدرسی شبیه به این آدرس با استفاده از فایل‌های قرار گرفته در دایرکتوری public منتشر خواهد شد:
 
-	USER.github.io/REPO
+	USER.github.io/YOUR-SITE-mira
 
 و اگر می‌خواهید از نام دامین اختصاصی خودتان برای نمایش محتوا استفاده کنید، فایلی به نام CNAME را در public بسازید و نام دامنه‌ی خودتان را در آن بنویسید
 
@@ -155,7 +156,7 @@ chaptername: گام هشتم: انتشار
 	~/mira/public$> git init
 	~/mira/public$> git add .
 	~/mira/public$> git commit -m 'publish'
-	~/mira/public$> git add remote git@github.com:USER/USER.github.io.git
+	~/mira/public$> git remote add origin git@github.com:USER/USER.github.io.git
 	~/mira/public$> git push origin master
 
 ## تکمیل
@@ -178,13 +179,15 @@ chaptername: گام هشتم: انتشار
 
 تمام شد، حالا بعد از هر بار mira build، یک بار در شاخه اصلی و یک بار در شاخه public همه چیز را به گیت اضافه کنید و push کنید
 
-	~/mira$> git add .
-	~/mira$> git commit -m 'add content'
-	~/mira$> git push origin master
 	~/mira$> cd public
 	~/mira/public$> git add .
 	~/mira/public$> git commit -m 'publish'
 	~/mira/public$> git push origin master
+	~/mira/public$> cd ..
+	~/mira$> git add .
+	~/mira$> git commit -m 'add content'
+	~/mira$> git push origin master
+
 
 
 

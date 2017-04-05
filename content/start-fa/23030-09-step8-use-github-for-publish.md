@@ -168,6 +168,7 @@ chaptername: گام هشتم: انتشار
 - روی گیت هاب مخزنی با نام سایت خود بسازید، مثلا YOUR-SITE-mira
 - گیت را در دایرکتوری ریشه‌ای که میرا را در آن استفاده می‌کنید، پیکربندی کنید و مخزن YOUR-SITE-mira را به عنوان remote به پروژه اضافه کنید.
 
+
 	~/mira$> git init
 	~/mira$> git remote add origin git@github.com:USER/YOUR-SITE-mira-content.git
 	~/mira$> git add .

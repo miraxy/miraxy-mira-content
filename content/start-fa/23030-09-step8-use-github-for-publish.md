@@ -166,15 +166,17 @@ chaptername: گام هشتم: انتشار
 - دایرکتوری public را کاملا پاک کنید `rm -rf public`
 - روی گیت هاب مخزنی با نام کاربری خود برای انتشار محتوا بسازید: USER.github.io
 - روی گیت هاب مخزنی با نام سایت خود بسازید، مثلا YOUR-SITE-mira
-- گیت را در دایرکتوری ریشه‌ای که میرا را در آن استفاده می‌کنید، پیکربندی کنید و مخزن YOUR-SITE-mira را به عنوان remote به پروژه اضافه کنید.
+- گیت را در دایرکتوری ریشه‌ای که میرا را در آن استفاده می‌کنید، پیکربندی کنید و مخزن YOUR-SITE-mira را به عنوان remote به پروژه اضافه کنید.  
 
+دستورهایی که باید وارد کنید چیزی شبیه به این‌ها خواهد بود:
 
 	~/mira$> git init
 	~/mira$> git remote add origin git@github.com:USER/YOUR-SITE-mira-content.git
 	~/mira$> git add .
 	~/mira$> git commit -m 'start'
 
-- حالا public را به عنوان یک ساب ماژول به این مخزن معرفی میکنیم:
+در آخر public را به عنوان یک ساب ماژول به این مخزن معرفی میکنیم:
+
 
 	git submodule add -b master git@github.com:USER/USER.github.io.git public
 

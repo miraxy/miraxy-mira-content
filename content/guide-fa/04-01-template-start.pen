@@ -230,7 +230,7 @@ _markup: markdown
 
 نحوه‌ استفاده:
 
-	{{ FOREACH Floors.values }}
+	{{ FOREACH FLOORS.values }}
 	  {{ name }}
 	  {{ description }}
 	
@@ -251,13 +251,13 @@ _markup: markdown
 
 این برچسب تنها مختص به main.tt2 میباشد
 
-تمام مقادیر معتبر برای POSTS در زیر این برچسب با اضافه کردن Entries.$id نیز قابل استفاده هستند
-نحوه‌ی استفاده به همراه Entries
+تمام مقادیر معتبر برای POSTS در زیر این برچسب با اضافه کردن ENTRIES.$id نیز قابل استفاده هستند
+نحوه‌ی استفاده به همراه ENTRIES
 
 	{{ FOREACH id IN UTIDS }}
-	   <h2><a href="{{ Entries.$id.url }}">{{ Entries.$id.title }}</a><h2>
-	   <h4>{{ Entries.$id.CALENDAR.day }}-{{ Entries.$id.CALENDAR.month_name }}-{{ Entries.$id.CALENDAR.year }}</h4>
-	   <p>{{ Entries.$id.body.less }}</p>
+	   <h2><a href="{{ ENTRIES.$id.url }}">{{ ENTRIES.$id.title }}</a><h2>
+	   <h4>{{ ENTRIES.$id.CALENDAR.day }}-{{ ENTRIES.$id.CALENDAR.month_name }}-{{ ENTRIES.$id.CALENDAR.year }}</h4>
+	   <p>{{ ENTRIES.$id.body.less }}</p>
 	{{ END }}
 
 
@@ -371,7 +371,7 @@ _markup: markdown
 
 نحوه استفاده:
 
-	{{ FOREACH archive IN Archives.pairs }}
+	{{ FOREACH archive IN ARCHIVES.pairs }}
 	  {{ archive.key }} نام آرشیو
 	  <hr>
 	  {{ FOREACH item IN archive.value.values }}

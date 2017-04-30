@@ -9,8 +9,6 @@ email: kiavash@gmail.com
 url: http://miraxy.github.io/doc
 root: /doc/
 
-style: style-ltr.css
-
 ## default post permanent link
 permalink: :title/
 
@@ -23,7 +21,7 @@ post_sort: reverse
 ## number of posts will be show in archives index page
 archive_post_num: all
 
-template: mira-doc
+template: newsprint
 
 lists:
 

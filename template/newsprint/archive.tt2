@@ -1,0 +1,31 @@
+
+{{ INCLUDE header }}
+
+<!-- Main Content -->
+<div class="container">
+  <div class="row">
+    <div class="col-lg-7 col-lg-offset-1 col-md-7 col-md-offset-1">
+      {{ FOREACH POSTS }}
+        <h4><a href="{{ url }}">{{ title }}</a> - <small>{{ date }}</small></h4>
+      {{- END }}
+
+      <ul class="pager">
+        {{ IF PAGE.prev }}
+        <li class="previous">
+          <a href="{{ prev }}">&larr; Newer Posts</a>
+        </li>
+        {{- END }}
+        {{ IF PAGE.next }}
+        <li class="next">
+          <a href="{{ next }}">Older Posts &rarr;</a>
+        </li>
+        {{- END }}
+      </ul>
+    </div>
+
+    {{ INCLUDE sidebar }}
+
+  </div>
+</div>
+
+{{ INCLUDE footer }}

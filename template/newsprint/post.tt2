@@ -1,0 +1,20 @@
+
+{{ INCLUDE header }}
+
+<!-- Main Content -->
+<div class="container">
+  <div class="row">
+    <div class="col-lg-7 col-lg-offset-1 col-md-8">
+      {{ FOREACH POSTS }}
+      <a name="{{ title }}"></a>
+         <h2><a href="{{ url }}">{{ title }}</a></h2>
+         {{ body.more }}
+      {{ END }}
+    </div>
+
+    {{ INCLUDE sidebar }}
+
+  </div>
+</div>
+
+{{ INCLUDE footer }}

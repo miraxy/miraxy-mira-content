@@ -3,7 +3,7 @@
   <li><h2><a href="{{ ROOT }}/">{{ TITLE }}</a></h2></li>
   <li><h5>{{ DESCRIPTION }}</h5></li>
 
-{% FOREACH CHAPTER_ARCHIVE.sort('name')
+{{ FOREACH CHAPTER_ARCHIVE.sort('name') }}
     {{ FOREACH post IN posts.sort }}
       {{ IF loop.index == 0 }}
         <h3>{{ ENTRIES.$post.chaptername }}</h3>
@@ -11,6 +11,6 @@
       <h5><a href="#{{ ENTRIES.$post.title }}">{{ ENTRIES.$post.title }}</a></h5>
 <!--      <h5><a href="#{{ ENTRIES.$post.url }}">{{ ENTRIES.$post.title }}</a></h5> -->
     {{ END }}
-{% END
+{{ END }}
 </ul>
 </div>

@@ -1,7 +1,4 @@
 
-#general 'mira' config, you can make config files for any floor in /config/FLOOR_NAME.yml
-
-
 ## Site settings
 title: شروع
 description: راهنمای شروع به کار با میرا
@@ -9,18 +6,13 @@ description: راهنمای شروع به کار با میرا
 author: kiavash
 email: kiavash@gmail.com
 
- # the base hostname & protocol for your site
 url: http://miraxy.github.io/start-fa
 root: /start-fa/
 
+style: style-rtl.css
+
 ## default post permanent link
 permalink: :title/
-
-plugins:
- - jalali
-
-## Your local Time Zone
-TimeZone: +03:30
 
 ## Build settings
 default_markup: markdown
@@ -38,5 +30,12 @@ lists:
   - chapter
 
 namespace:
-  گیت: git
-
+ 01: start
+ 02: conditions
+ 03: fields
+ 04: config
+ 05: content
+ 06: statics
+ 07: template
+ 08: customize
+ 09: publish

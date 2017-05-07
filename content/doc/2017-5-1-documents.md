@@ -46,7 +46,7 @@ title: documents
    - default_markup
 
      - markdown -or- md
-     - githubmarkdown -or- github -or- ghmd
+     - mmd (mira markdown parser based on multimarkdown 2.0.b6)
      - bbcode
      - textile
      - text -or- txt   just add \<br> in enlines

@@ -13,7 +13,7 @@ root: /doc/
 permalink: :title/
 
 ## Build settings
-default_markup: ghmd
+default_markup: mmd
 
 ## number of posts will be show in main index page
 post_num: all

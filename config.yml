@@ -18,7 +18,7 @@ imageurl: /static/img
 permalink: :year/:month/:day/:title/
 
 ## Build settings
-default_markup: markdown
+default_markup: mmd
 
 ## number of posts will be show in main index page
 post_num: 3

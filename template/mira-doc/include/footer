@@ -1,0 +1,62 @@
+<br>
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+          <div class="row">
+              <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                  <li>
+                    <a href="mailto: {{ EMAIL }}">
+                      <span class="fa-stack fa-lg">
+                        <i class="fa fa-circle fa-stack-2x"></i>
+                        <i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
+                      </span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="//twitter.com/kiavash">
+                      <span class="fa-stack fa-lg">
+                        <i class="fa fa-circle fa-stack-2x"></i>
+                        <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                      </span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="//gitlab.com/kiavash/mira">
+                      <span class="fa-stack fa-lg">
+                        <i class="fa fa-circle fa-stack-2x"></i>
+                        <i class="fa fa-gitlab fa-stack-1x fa-inverse"></i>
+                      </span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="//github.com/kiamazi/mira">
+                      <span class="fa-stack fa-lg">
+                        <i class="fa fa-circle fa-stack-2x"></i>
+                        <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                      </span>
+                    </a>
+                  </li>
+                </ul>
+                <p><i class="fa fa-copyright" aria-hidden="true"></i>&nbsp; GPLv3</p>
+              </div>
+          </div>
+      </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="{{ MainSTATIC }}/js/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="{{ MainSTATIC }}/js/bootstrap.min.js"></script>
+
+    <!-- Custom Theme JavaScript
+    <script src="{{ MainSTATIC }}/js/clean-blog.js"></script> -->
+
+</div>
+    <script type="text/javascript" src="{{ MainSTATIC }}/js/prettify/prettify.js"></script>
+    <script type="text/javascript" src="{{ MainSTATIC }}/js/run.js"></script>
+
+</body>
+
+</html>

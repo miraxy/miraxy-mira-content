@@ -1,0 +1,140 @@
+---
+utid: 20170216055047
+date: 2017-02-16 05:50:47
+title: نمایش محتوا، با استفاده از POSTS
+_index: show posts
+_permalink:
+chapter: 04
+chaptername: قالب
+tags:
+  - قالب
+  - theme
+  - POSTS
+  - نمایش محتوا
+author: kiavash
+body-format: markdown
+---
+جهت نمایش محتوا در هر کدام از صفحات باید از حلقه‌ای که مقادیر POSTS را نمایش خواهد داد استفاده کرد.
+
+در تمام صفحات به جز صفحه‌ی main.tt2 برای نمایش محتوا از این حلقه استفاده می‌شود.
+
+	{{ FOREACH POSTS }}
+	   ...
+	{{ END }}
+
+اطلاعات ذخیره شده در هر POSTS چیزی شبیه به بلوک زیر است، بسته به تنظیم شخصی که انجام دادید، ممکن است فیلدها کمتر یا بیشتر باشند.
+
+	'title' => "post title",
+	'author' => 'kiavash',
+	'floor' => 'blog',
+	'body' => {
+	        'less' => "less body content",
+	        'more' => "full body content"
+	       },
+	'date' => '2017-02-10 17:45:03',
+	'CALENDAR' => {
+	           'year' => '2017',
+	           'month_name' => 'February',
+	           'day' => '10',
+	           'month' => '02'
+	           'jyear' => '1396',
+	           'jmonth_name' => 'بهمن',
+	           'jday' => '26',
+	           'jmonth' => '11'
+	           'hour' => '17',
+	           'minute' => '45',
+	           'second' => '03'
+	 	},
+	'categories' => {
+	             "CAT1" => {
+	                    'name' => "CAT1",
+	                    'url' => "/blog/categories/CAT1namespace/"
+	                   },
+	             "CAT2" => {
+	                    'name' => "CAT2",
+	                    'url' => "/blog/categories/CAT2namespace/"
+	                   }
+	 	},
+	'other_archive_fields' => {
+	             "OAF1" => {
+	                    'name' => "OAF1",
+	                    'url' => "/blog/categories/OAF1namespace/"
+	                   },
+	             "OAF2" => {
+	                    'name' => "OAF2",
+	                    'url' => "/blog/categories/OAF2namespace/"
+	                   },
+	 	},
+	'url' => "/blog/2017/02/10/post-title/",
+	'custom_field' => 'value',
+	'other_field' => 'value',
+	'else' => 'value',
+
+برای فراخوانی مقدار فیلدها در حلقه‌ی POST:
+
+برای آنهایی که مقدار تک خطی دارند کافی است بین دو آکولاد نامشان را بنویسید، مثل
+
+	{{ title }}
+
+فیلدهای تاریخ را با یک نقطه بین CALENDAR و مقداری که مورد نظرتان است مشخص کنید، مثل
+
+	{{ CALENDAR.year }}
+	{{ CALENDAR.month_name }}
+	...
+
+متن بدنه‌ی محتوا هم مانند فیلدهای تاریخ
+
+	{{ body.less }}
+	{{ body.more }}
+
+لیست‌ها و آرشیو‌ها را در یک حلقه جدید لود کنید
+
+	{{ FOREACH categories.values }}
+	   <a href="{{ url }}">{{ name }}</a>
+	{{- END }}
+
+یا
+
+	{{ FOREACH categories }}
+	   <a href="{{ value.url }}">{{ value.name }}</a>
+	{{- END }}
+
+حلقه‌ها در هر بار تکرار یک کاراکتر خط جدید تولید میکنند، خط تیره که ابتدای END میبینید، به حلقه می‌گوید که در همان خط بماند
+
+یک مثال کامل:
+
+	{{ FOREACH POSTS }}
+
+	   <a href="{{ url }}">{{ title }}</a>
+
+	   {{ CALENDAR.day }}&nbsp;{{ CALENDAR.month_name }}&nbsp;{{ CALENDAR.year }}
+
+	   {{ CALENDAR.jday | $FarsiNum }}&nbsp;{{ CALENDAR.jmonth_name }}&nbsp;{{ CALENDAR.jyear | $FarsiNum }}
+
+	   {{ IF author }}
+	        {{ author }}
+	   {{- END }}
+	   
+
+	   {{ IF categories }}
+	     {{ FOREACH categories.values }}
+	       <a href="{{ url }}">@{{ name }}</a>
+	     {{- END }}
+	   {{- END }}
+
+	   {{ IF tags }}
+	     {{ FOREACH tags }}
+	        <a href="{{ value.url }}">#{{ value.name }}</a>
+	     {{- END }}
+	   {{- END }}
+
+	   {{ body.more }}
+
+	{{ END }}
+
+در قسمت تاریخ جهت نمایش اعداد به فارسی از فیلتر
+
+	| $FarsiNum‍
+
+استفاده شده، در هر جایی که بخواهید اعداد به جای لاتین به فارسی نمایش داده شوند از این فیلتر در کنار برچسب میتوان استفاده کرد.
+

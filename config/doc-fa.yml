@@ -1,0 +1,38 @@
+
+## Site settings
+title: اسناد
+description: اسناد میرا
+
+author: kiavash
+email: kiavash@gmail.com
+
+url: http://miraxy.github.io/doc-fa
+root: /doc-fa/
+
+style: style-rtl.css
+
+## default post permanent link
+permalink: :chapter/:title/
+
+## Build settings
+default_markup: html
+
+## number of posts will be show in main index page
+post_num: all
+post_sort: reverse
+## number of posts will be show in archives index page
+archive_post_num: all
+
+template: mira-doc
+
+lists:
+  - chapter
+
+namespace:
+ 1: نصب
+ 2: پیکربندی
+ 3: تنظیمات
+ 4: محتوا
+ 5: پوسته
+ 6: قالب
+

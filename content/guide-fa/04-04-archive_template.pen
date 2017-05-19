@@ -1,0 +1,40 @@
+---
+utid: 20170216053937
+date: 2017-02-16 05:39:37
+title: archive.tt2
+_index: archive template
+_permalink:
+chapter: 04
+chaptername: قالب
+tags:
+  - قالب
+  - theme
+author: kiavash
+_markup: markdown
+---
+
+به جز برچسب UTIDS تمام برچسب‌های main.tt2 و index.tt2 در archive با همان مقادیر معتبر هستند
+
+	{{ MainTITLE }}
+	{{ MainDESCRIPTION }}
+	{{ MainURL }}
+	{{ MainROOT }}
+	{{ MainSTATIC }}
+	{{ MainIMAGEURL }}
+	{{ MainAUTHOR }}
+	{{ MainEMAIL }}
+	{{ MainPageTitle }}
+
+	{{ TITLE }}
+	{{ DESCRIPTION }}
+	{{ URL }}
+	{{ ROOT }}
+	{{ STATIC }}
+	{{ IMAGEURL }}
+	{{ AUTHOR }}
+	{{ EMAIL }}
+
+	{{ ArchiveTITLE }}
+
+	{{ ENTRIES }}
+	{{ FLOORS }}

@@ -1,0 +1,41 @@
+
+## Site settings
+title: شروع
+description: راهنمای شروع به کار با میرا
+
+author: kiavash
+email: kiavash@gmail.com
+
+url: http://miraxy.github.io/start-fa
+root: /start-fa/
+
+style: style-rtl.css
+
+## default post permanent link
+permalink: :title/
+
+## Build settings
+default_markup: markdown
+
+## number of posts will be show in main index page
+post_num: all
+post_sort: reverse
+## number of posts will be show in archives index page
+archive_post_num: all
+
+template: mira-doc
+
+lists:
+  - categories
+  - chapter
+
+namespace:
+ 01: start
+ 02: conditions
+ 03: fields
+ 04: config
+ 05: content
+ 06: statics
+ 07: template
+ 08: customize
+ 09: publish

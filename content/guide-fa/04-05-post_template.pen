@@ -1,0 +1,46 @@
+---
+utid: 20170216054645
+date: 2017-02-16 05:46:45
+title: post-template
+_index:
+_permalink:
+chapter: 04
+chaptername: قالب
+tags:
+  - قالب
+  - theme
+author: kiavash
+_markup: markdown
+---
+تمام برچسب‌های index.tt2 در post.tt2 با همان مقادیر معتبر هستند.
+
+تنها برچسب اختصاصی در این الگو PostTITLE است که برابر با نام تیتر نوشته شما یا همان فیلد title در سربرگ میباشد
+
+	{{ MainTITLE }}
+	{{ MainDESCRIPTION }}
+	{{ MainURL }}
+	{{ MainROOT }}
+	{{ MainSTATIC }}
+	{{ MainIMGURL }}
+	{{ MainAUTHOR }}
+	{{ MainEMAIL }}
+	{{ MainPageTitle }}
+
+	{{ TITLE }}
+	{{ DESCRIPTION }}
+	{{ URL }}
+	{{ ROOT }}
+	{{ STATIC }}
+	{{ IMAGEURL }}
+	{{ AUTHOR }}
+	{{ EMAIL }}
+
+	{{ ARCHIVES}} :
+	{{ FOREACH archive IN ARCHIVES.pairs }}
+
+برای اطلاعات کامل‌تر در مورد آرشیو ها قسمت اول بخش پوسته ها را ببینید، این برچسب مناسب برای نمایش در سایدبار و امثال آن است. برای ساختن صفحات آرشیو، archive.tt2 از POSTS استفاده می‌کند، کارکرد این برچسب با صفحات archive متفاوت است.
+
+	{{ ENTRIES }}
+	{{ FLOORS }}
+
+	{{PostTITLE}}

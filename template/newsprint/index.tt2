@@ -1,0 +1,10 @@
+
+{{ INCLUDE header }}
+
+       {{ FOREACH POSTS }}
+       <div id="write">
+          {{ body.more }}
+       </div>
+       {{ END }}
+
+{{ INCLUDE footer }}

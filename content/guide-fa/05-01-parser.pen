@@ -1,0 +1,15 @@
+---
+utid: 20170225224413
+date: 2017-02-25 22:44:13
+title: پارسرهای داخلی میرا
+_index: parser
+_permalink:
+chapter: 05
+chaptername: parser
+tags:
+  - parser
+  - body
+author: kiavash
+_markup: markdown
+---
+با استفاده از قواعد درونی parserهای میرا میتوان علاوه بر استفاده از markup برای نوشتن بدنه محتوا، از برچسب‌های درونی میرا نیز استفاده کرد

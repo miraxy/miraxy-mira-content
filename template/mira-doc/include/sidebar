@@ -9,9 +9,12 @@
         <h3>{{ ENTRIES.$post.chaptername }}</h3>
       {{ END }}
 <<<<<<< HEAD
+<<<<<<< HEAD
       {{ IF ( (ENTRIES.$post.seassion) and (ENTRIES.${loop.prev}.seassionname != ENTRIES.$post.seassionname) ) }}
       	<h5>{{ ENTRIES.$post.seassionname }}</h5>
       {{ END }}
+=======
+>>>>>>> 0347776e6d46d557843cf9e6b634fdfd3a294582
 =======
 >>>>>>> 0347776e6d46d557843cf9e6b634fdfd3a294582
       <h5><a href="#{{ ENTRIES.$post.title }}">{{ ENTRIES.$post.title }}</a></h5>

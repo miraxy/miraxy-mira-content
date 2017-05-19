@@ -7,6 +7,7 @@
   <div class="row">
     <div class="col-lg-8 col-md-8">
 <<<<<<< HEAD
+<<<<<<< HEAD
        {{ FOREACH post IN POSTS }}
 
        {{ IF loop.prev.chaptername != post.chaptername }}
@@ -22,10 +23,15 @@
           <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
           {{ post.body.more }}
 =======
+=======
+>>>>>>> 0347776e6d46d557843cf9e6b634fdfd3a294582
        {{ FOREACH POSTS }}
        <a name="{{ title }}"></a>
           <h2><a href="{{ url }}">{{ title }}</a></h2>
           {{ body.more }}
+<<<<<<< HEAD
+>>>>>>> 0347776e6d46d557843cf9e6b634fdfd3a294582
+=======
 >>>>>>> 0347776e6d46d557843cf9e6b634fdfd3a294582
        {{ END }}
     </div>

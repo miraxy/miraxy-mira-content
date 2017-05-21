@@ -1,10 +1,10 @@
 ---
-utid           : 000500030022
+utid           : 000500020007
 title          : نمایش نوشته‌ها با حلقه‌ی POSTS
 chapter        : 5
 chaptername    : پوسته
-seassion       : 3
-seassionname   : توضیحاتی در مورد برچسب‌ها
+seassion       : 2
+seassionname   : برچسب‌های مورد استفاده در پوسته
 ---
 
 

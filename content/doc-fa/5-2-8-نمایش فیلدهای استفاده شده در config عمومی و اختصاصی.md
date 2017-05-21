@@ -1,10 +1,10 @@
 ---
-utid           : 000500030023
+utid           : 000500020008
 title          : نمایش فیلدهای استفاده شده در config عمومی و اختصاصی
 chapter        : 5
 chaptername    : پوسته
-seassion       : 3
-seassionname   : توضیحاتی در مورد برچسب‌ها
+seassion       : 2
+seassionname   : برچسب‌های مورد استفاده در پوسته
 ---
 
 

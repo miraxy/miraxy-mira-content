@@ -1,0 +1,40 @@
+<div class="main-content">
+
+<div class="sidebar">
+  <div class="sidebar__inner">
+    {{ FOREACH CHAPTER_ARCHIVE.sort('name') }}
+    {{ FOREACH post IN posts.sort }}
+      {{ IF loop.index == 0 }}
+        <h3>{{ ENTRIES.$post.chaptername }}</h3>
+      {{ END }}
+
+      {{ IF ( (ENTRIES.$post.seassion) and (ENTRIES.${loop.prev}.seassionname != ENTRIES.$post.seassionname) ) }}
+      	<h5>{{ ENTRIES.$post.seassionname }}</h5>
+      {{ END }}
+
+      <h5><a href="#${ENTRIES.$post.seassion}_${ENTRIES.$post.title}">{{ ENTRIES.$post.title }}</a></h5>
+<!--      <h5><a href="#{{ ENTRIES.$post.url }}">{{ ENTRIES.$post.title }}</a></h5> -->
+    {{ END }}
+    {{ END }}
+  </div>
+</div>
+
+<section id="content" class="container main">
+  {{ FOREACH post IN POSTS }}
+    {{ IF loop.prev.chaptername != post.chaptername }}
+    <h2>{{ post.chaptername }}</h2>
+    {{ END }}
+    {{ IF post.seassionname and loop.prev.seassionname != post.seassionname }}
+    <h2>{{ post.seassionname }}</h2>
+    {{ END }}
+    <article id="{{ post.slug }}" class="article article-type-{{ LAYOUT }}" itemscope itemprop="blogPost">
+      <a name="${post.seassion}_${post.title}"></a>
+      <h2 class="title" itemprop="name">{{ post.title }}</h2>
+      <section class="content">
+        {{ post.body.more }}
+      </section>
+    </article>
+  {{ END }}
+</section>
+
+</div>

@@ -1,15 +1,16 @@
 
 ## Site settings
-title: اسناد
-description: اسناد میرا
+title: اسناد میرا
+description: اسناد راهنمای استفاده از میرا
 
 author: kiavash
 email: kiavash@gmail.com
 
 url: http://miraxy.github.io/doc-fa
-root: /doc-fa/
+root: /doc-fa
 
-style: style-rtl.css
+language: Farsi
+icon: /static/img/mira.png
 
 ## default post permanent link
 permalink: :chapter/:title/
@@ -23,16 +24,15 @@ post_sort: reverse
 ## number of posts will be show in archives index page
 archive_post_num: all
 
-template: mira-doc
+template: mido
 
 lists:
-  - chapter
+  - seassion
 
 namespace:
- 1: نصب
- 2: پیکربندی
- 3: تنظیمات
- 4: محتوا
- 5: پوسته
- 6: قالب
+ 1: میرا
+ 2: استفاده
+ 3: محتوا
+ 4: پوسته
+ 5: قالب
 

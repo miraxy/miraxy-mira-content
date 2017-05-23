@@ -1,0 +1,216 @@
+
+<!DOCTYPE html>
+<html lang="{{ SITE.language }}">
+<head>
+  <title>{{ TITLE }}</title>
+
+  <meta charset="utf-8">
+  <meta name="description" content="{{ DESCRIPTION }}">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="{{ TITLE }}">
+  <meta property="og:url" content="{{ URL }}">
+  <meta property="og:site_name" content="{{ TITLE }}">
+  <meta property="og:description" content="{{ DESCRIPTION | html }}">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="{{ TITLE }}">
+  <meta name="twitter:description" content="{{ DESCRIPTION | html }}">
+
+  <link rel="short icon" href="{{ SITE.icon }}">
+  
+
+	<style>
+		@charset "UTF-8";
+		@import url("https://fonts.googleapis.com/css?family=Anonymous+Pro");
+		*,
+		*:before,
+		*:after{
+			box-sizing: border-box;
+		}
+		@font-face{
+			font-family:Sahel;
+			font-weight:regular;
+			src:url(../font/sahel.woff)
+		}
+		@font-face{
+			font-family:Sahel;
+			font-weight:700;
+			src:url(../font/sahel-bold.woff)
+		}
+		body, html{
+			font:16px/1.618 Sahel;
+			line-height: 1.6;
+			height: 100%;
+			-webkit-font-smoothing:antialiased;
+			-moz-osx-font-smoothing:grayscale;
+			text-rendering:optimizelegibility;
+		}
+		
+		a{
+			color:#0048ab;
+			text-decoration:none
+		}
+		a:hover{
+			text-decoration:underline
+		}
+
+		blockquote{
+			color:#666;
+			border-right: 4px solid #555;
+		}
+		header h1{
+			font-size: 32px;
+			color: #666;
+		}
+
+		.container{
+			max-width: 95%px;
+			margin: 0 auto;
+		}
+
+		#content{
+			padding: 18px;
+			margin-right: 31%;
+			color: #222;
+		}
+		#content h1.list {font-size: 1.4em; color: #198bbd;}
+		#content h2.list {font-size: 1.4em; color: #198bbd;}
+		#content h3.list {font-size: 1.6em; color: #18bc9c;}
+
+		#content h2.list:before, #content h3.list:before {
+			content: "";
+			display: inline-block;
+			vertical-align: middle;
+			width: 50px;
+			height: 2px;
+			background: #c0d3da;
+			margin: 0 30px;
+		}
+		#content h3.list:before {
+			width: 150px;
+		}
+		#content h1.list:after, #content h2.list:after {
+			content: "───┌";
+			display: inline-block;
+			vertical-align: middle;
+			color: #c0d3da;
+			margin: 0 30px;
+		}
+		
+		.content-body h1{font-size: 1.1em;}
+		.content-body h2{font-size: 1em;}
+		.content-body h3{font-size: 0.9em;}
+
+		#sidebar{
+			float: right;
+			width: 30%;
+			line-height:1.1 !important;
+			will-change: min-height;
+		}
+
+		#sidebar .sidebar__inner{
+			padding: 10px;
+			position: relative;
+			line-height:1.1 !important;
+			transform: translate3d(0, 0, 0);
+			transform: translate(0, 0);
+			will-change: position, transform;
+		}
+		
+		#sidebar h1 {font-size: 1.2em; line-height: 1;}
+		#sidebar h2 {font-size: 1.1em; line-height: 1;}
+		#sidebar h3 {font-size: 0.9em; line-height: 1; color: #18bc9c;}
+		#sidebar a  {font-size: 0.9em; font-weight: 300; line-height: 1.4; display: block;  padding-right: 10%; color: #198bbd;}
+		#sidebar hr {margin: 0 !important;}
+		
+		.seassion {color: #0d4b66; font-size: 1em;   font-weight: 600; line-height: 1.4; display: block;}
+		.chapter  {color: #0d4b66; font-size: 0.9em; font-weight: 400; line-height: 1.4; display: block; padding-right: 5%;}
+		
+		code,pre{
+			overflow-x:auto;
+			overflow-y:hidden;
+			background:#eaeef3;
+			color:#00193a;
+			direction: ltr;
+			text-align: left;
+			line-height: 1.4!important;
+			padding: 0.5rem;
+			font-family: Vazir Code;
+		}
+
+		pre code {padding: 0; background-color:transparent !important; display:block;}
+		
+		html[lang=Farsi] body,html[lang=Farsi] html{
+			font-family:Sahel
+		}
+		html[lang=Farsi] .container,html[lang=Farsi] .sidebar{
+			direction:rtl
+		}
+
+
+	</style>
+
+</head>
+<body>
+
+	<header>
+		<section class="container">
+			<h1>{{ TITLE }}</h1>
+		</section>
+	</header>
+
+	<div class="container">
+		<div id="sidebar">
+			<nav class="sidebar__inner">
+				{{ FOREACH SEASSION_ARCHIVE.sort('name') }}
+    		{{ FOREACH post IN posts.sort }}
+      	{{ IF loop.index == 0 }}
+        	<span class="seassion">{{ ENTRIES.$post.seassionname }}</span>
+      	{{ END }}
+   			{{ IF ( ENTRIES.${loop.prev}.chaptername != ENTRIES.$post.chaptername ) }}
+					<span class="chapter">{{ ENTRIES.$post.chaptername }}</span>
+				{{ END }}
+					<a href="#${ENTRIES.$post.seassionname}_${ENTRIES.$post.chaptername}_${ENTRIES.$post.title}">- {{ ENTRIES.$post.title }}</a>
+		    {{ END }}
+    		{{ END }}
+			</nav>
+		</div>
+
+		<section id="content">
+	  {{ FOREACH post IN POSTS }}
+    {{ IF loop.prev.seassionname != post.seassionname }}
+    	<h1 class="list">{{ post.seassionname }}</h1>
+    {{ END }}
+    {{ IF loop.prev.chaptername != post.chaptername }}
+    	<h2 class="list">{{ post.chaptername }}</h2>
+    {{ END }}
+
+    	  <a name="${post.seassionname}_${post.chaptername}_${post.title}"></a>
+    	  <h3 class="list">{{ post.title }}</h3>
+    	  
+    	  <div class="content-body">
+        {{ post.body.more }}
+        </div>
+
+
+  	{{ END }}
+		</section>
+	</div>
+
+	<script type="text/javascript" src="{{ MainSTATIC }}/js/jquery.min.js"></script>
+	<script type="text/javascript" src="{{ MainSTATIC }}/js/sticky-sidebar.js"></script>
+	<script type="text/javascript">
+		\$(document).ready(function(){
+
+			\$('#sidebar').stickySidebar({
+				topSpacing: 20,
+				bottomSpacing: 20,
+				containerSelector: '.container',
+				innerWrapperClass: 'sidebar__inner'
+			});
+		});
+	</script>
+</body>
+</html>
+
+

@@ -42,6 +42,7 @@ chaptername   : برچسب‌های مورد استفاده در پوسته
 {{ MAIN }}
 {{ SITE }}
 {{ BUILD }}
+{{ PAGE }}
 </code></pre>
 
 

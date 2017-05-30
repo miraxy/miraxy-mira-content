@@ -1,5 +1,5 @@
 ---
-utid          : 000400020007
+utid          : 000400020008
 title         : نمایش نوشته‌ها با حلقه‌ی POSTS
 seassion      : 4
 seassionname  : پوسته

@@ -43,6 +43,7 @@ chaptername   : برچسب‌های مورد استفاده در پوسته
 {{ MAIN }}
 {{ SITE }}
 {{ BUILD }}
+{{ PAGE }}
 
 {{ IS_ARCHIVE }}      :(boolean) true for field archives
 {{ IS_DATE_ARCHIVE }} :(boolean) true for date archives

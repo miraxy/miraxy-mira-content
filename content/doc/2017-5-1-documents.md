@@ -295,7 +295,7 @@ Variables specified in `config.yml` and `config` directory, are done using YAML.
   - mmd   (mira markdown parser based on multimarkdown 2.0.b6)
   - bbcode
   - textile
-  - text -or- txt   just add \<br> in enlines
+  - text -or- txt   just add ‍`<br>` in endlines
   - html
 
 - **default_extension**

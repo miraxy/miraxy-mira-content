@@ -123,7 +123,7 @@
 		#sidebar a  {font-size: 0.9em; font-weight: 300; line-height: 1.4; display: block;  padding-right: 10%; color: #198bbd;}
 		#sidebar hr {margin: 0 !important;}
 		
-		.seassion {color: #0d4b66; font-size: 1em;   font-weight: 600; line-height: 1.4; display: block;}
+		.season {color: #0d4b66; font-size: 1em;   font-weight: 600; line-height: 1.4; display: block;}
 		.chapter  {color: #0d4b66; font-size: 0.9em; font-weight: 400; line-height: 1.4; display: block; padding-right: 5%;}
 		
 		code,pre{
@@ -160,32 +160,32 @@
 	</header>
 
 	<div class="container">
-		<div id="sidebar">
+		<section id="sidebar">
 			<nav class="sidebar__inner">
-				{{ FOREACH SEASSION_ARCHIVE.sort('name') }}
+				{{ FOREACH SEASON_ARCHIVE.sort('name') }}
     		{{ FOREACH post IN posts.sort }}
       	{{ IF loop.index == 0 }}
-        	<span class="seassion">{{ ENTRIES.$post.seassionname }}</span>
+        	<span class="season">{{ ENTRIES.$post.seasonname }}</span>
       	{{ END }}
    			{{ IF ( ENTRIES.${loop.prev}.chaptername != ENTRIES.$post.chaptername ) }}
 					<span class="chapter">{{ ENTRIES.$post.chaptername }}</span>
 				{{ END }}
-					<a href="#${ENTRIES.$post.seassionname}_${ENTRIES.$post.chaptername}_${ENTRIES.$post.title}">- {{ ENTRIES.$post.title }}</a>
+					<a href="#${ENTRIES.$post.seasonname}_${ENTRIES.$post.chaptername}_${ENTRIES.$post.title}">- {{ ENTRIES.$post.title }}</a>
 		    {{ END }}
     		{{ END }}
 			</nav>
-		</div>
+		</section>
 
 		<section id="content">
 	  {{ FOREACH post IN POSTS }}
-    {{ IF loop.prev.seassionname != post.seassionname }}
-    	<h1 class="list">{{ post.seassionname }}</h1>
+    {{ IF loop.prev.seasonname != post.seasonname }}
+    	<h1 class="list">{{ post.seasonname }}</h1>
     {{ END }}
     {{ IF loop.prev.chaptername != post.chaptername }}
     	<h2 class="list">{{ post.chaptername }}</h2>
     {{ END }}
 
-    	  <a name="${post.seassionname}_${post.chaptername}_${post.title}"></a>
+    	  <a name="${post.seasonname}_${post.chaptername}_${post.title}"></a>
     	  <h3 class="list">{{ post.title }}</h3>
     	  
     	  <div class="content-body">

@@ -1,8 +1,8 @@
 ---
-utid          : 000400020002
+utid          : 2017061021032404020002
 title         : main.tt2
-seassion      : 4
-seassionname  : پوسته
+season        : 4
+seasonname    : پوسته
 chapter       : 2
 chaptername   : برچسب‌های مورد استفاده در پوسته
 ---

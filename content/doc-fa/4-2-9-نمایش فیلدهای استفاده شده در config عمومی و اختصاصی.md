@@ -1,8 +1,8 @@
 ---
-utid          : 000400020009
+utid          : 2017061021032404020009
 title         : نمایش فیلدهای استفاده شده در config عمومی و اختصاصی
-seassion      : 4
-seassionname  : پوسته
+season        : 4
+seasonname    : پوسته
 chapter       : 2
 chaptername   : برچسب‌های مورد استفاده در پوسته
 ---

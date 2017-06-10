@@ -1,8 +1,8 @@
 ---
-utid          : 000500010002
+utid          : 2017061021032405010002
 title         : برچسب‌های outline
-seassion      : 5
-seassionname  : قالب
+season        : 5
+seasonname    : قالب
 chapter       : 1
 chaptername   : دستور زبان
 ---

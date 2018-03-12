@@ -1,6 +1,6 @@
 ---
 utid          : 2017061021032404020006
-title         : index.tt2
+title         : post.tt2
 season        : 4
 seasonname    : پوسته
 chapter       : 2
